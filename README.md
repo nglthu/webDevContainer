@@ -49,3 +49,6 @@ APP_URL=https://animated-dollop-wr7v5464g9xc9j9-8000.app.github.dev/
 #check
 ASSET_URL="${APP_URL}"
 ```
+
+# local host link issue
+https://laracasts.com/discuss/channels/devops/laravel-10-vite-and-codespaces
