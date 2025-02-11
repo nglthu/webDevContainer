@@ -40,3 +40,12 @@ npm run dev
 composer require aiven/aiven-laravel
 
 ```
+
+
+# APP_URL
+
+```
+APP_URL=https://animated-dollop-wr7v5464g9xc9j9-8000.app.github.dev/
+#check
+ASSET_URL="${APP_URL}"
+```
