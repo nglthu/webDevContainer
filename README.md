@@ -50,7 +50,46 @@ APP_URL=https://animated-dollop-wr7v5464g9xc9j9-8000.app.github.dev/
 ASSET_URL="${APP_URL}"
 ```
 
-# local host link issue
-https://laracasts.com/discuss/channels/devops/laravel-10-vite-and-codespaces
+# Codespace: SETUP: ROUTE forwarding to DEPLOYED SERVER [not to default local host] 
 
-https://github.com/JonoHall/Laravel-Vite-Codespaces
+## Setup .Env
+
+```
+APP_URL=https://animated-dollop-wr7v5464g9xc9j9-8002.app.github.dev/
+CODESPACE_NAME=animated-dollop-wr7v5464g9xc9j9
+```
+## Change config in the vite.config.js to Correct SERVER
+
+Change the Vite config so that when you open the Laravel website your web client will find assets at the correct Vite instanace host/port.
+
+```
+vite.config.js:
+
+
+    plugins: [
+      ...
+    ],
+    server: {
+        hmr: {
+            host: process.env.CODESPACE_NAME ? process.env.CODESPACE_NAME + '-8002.app.github.dev' : null,
+            clientPort: process.env.CODESPACE_NAME ? 443 : null,
+            protocol: process.env.CODESPACE_NAME ? 'wss' : null
+        },
+    }
+```    
+### Change Config for trustProxies in bootstrap/app.php
+
+```
+ ->withMiddleware(function (Middleware $middleware) {
+    
+        if (env('APP_ENV') == 'production') {
+            $middleware->trustProxies(at: '*');
+        }
+})
+```
+
+# Reference
+
+1. [Route to deployed Server in Codespaces](https://github.com/JonoHall/Laravel-Vite-Codespaces
+)
+2. [Route to Server of  Codespace](https://laracasts.com/discuss/channels/devops/laravel-10-vite-and-codespaces)

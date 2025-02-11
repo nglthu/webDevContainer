@@ -12,11 +12,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
 
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->web(append: [
-            \App\Http\Middleware\HandleInertiaRequests::class,
-            \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
-        ]);
-        if (env('APP_ENV') == 'local') {
+    
+        if (env('APP_ENV') == 'production') {
             $middleware->trustProxies(at: '*');
         }
 })
