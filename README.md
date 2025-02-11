@@ -23,7 +23,15 @@ composer create-project --prefer-dist laravel/laravel myWeb
 ```
 composer require laravel/breeze --dev
 ```
+## Install breeze
 
+```
+php artisan breeze:install
+ 
+php artisan migrate
+npm install
+npm run dev
+```
 
 # Database
 
