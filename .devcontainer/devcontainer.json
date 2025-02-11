@@ -1,4 +1,4 @@
-npm// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/php-mariadb
 {
 	"name": "PHP & MariaDB",
@@ -20,7 +20,7 @@ npm// For format details, see https://aka.ms/devcontainer.json. For config optio
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
-	"postCreateCommand": "npm install",
+	//"postCreateCommand": "npm install",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
