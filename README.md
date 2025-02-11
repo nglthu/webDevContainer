@@ -52,3 +52,5 @@ ASSET_URL="${APP_URL}"
 
 # local host link issue
 https://laracasts.com/discuss/channels/devops/laravel-10-vite-and-codespaces
+
+https://github.com/JonoHall/Laravel-Vite-Codespaces
