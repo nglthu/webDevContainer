@@ -2,11 +2,13 @@
 
 ## Development Environment
 
-1. Viruality using codeSpaces
+1. Viruality using CodeSpaces
 
-2. Partially Locally by Connecting codespace to Visual studio Code
+[Introduction to dev containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 
-3. Totally Locally by Downloading the repo
+4. Partially Locally by Connecting codespace to Visual studio Code
+
+5. Totally Locally by Downloading the repo
 
 # Web Laravel Framework
 
