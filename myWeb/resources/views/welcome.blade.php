@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -71,6 +74,8 @@
 
                                 <div class="relative flex items-center "> 
                                 
+                                <input type="button" name="" id="btnajax" class="btn btn-primary" role="button" onclick="getMessageWithAxios()" value="Get Message With Axios">
+                                
 
                                 </div>
                       
@@ -81,9 +86,21 @@
 
                     <footer class="py-16 text-center text-lg text-black dark:text-white/150 hover:text-black/100 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                     Welcome to Student's Portal! 2025
+
+                    
+
                     </footer>
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+<script>
+getMessageWithAxios(){
+    axios.get('/test-axios-message').then(response => {
+        alert(response.data.message);
+    });
+}
+
+</script>

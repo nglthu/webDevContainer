@@ -34,4 +34,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/getJsonStudent', 'App\Http\Controllers\StudentController@jsonStudentReturn');
 });
 
+//test axios
+
+Route::get('test-axios-message', function (){
+    return response()->json([
+        'message' => 'Using axios at Front OR Back without Loading page'
+    ], 200);
+});
+
 require __DIR__.'/auth.php';
