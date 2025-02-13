@@ -69,7 +69,7 @@ class StudentController extends Controller
             [
                 'json post success' => true,
                 'studentID 0' => $student[0]['studentIDNumber'],
-                'student name 0'=>$student[0]['studentFullName']
+                'student name 0'=> $student[0]['studentFullName']
               
 
             ]
