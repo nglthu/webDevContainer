@@ -26,6 +26,17 @@ and install many tools you might want
 
 ```
 
+Default devcontainer.json : Linux image
+
+```
+
+This Linux image includes a number of runtime versions for popular languages like Python, Node, PHP, Java, Go, C++, Ruby, and .NET Core/C#. 
+The latest or LTS releases of these languages are used. 
+There are also tools to support data science and machine learning, such as JupyterLab and Conda. 
+The default dev container image also includes other developer tools and utilities like Git, GitHub CLI, yarn, openssh, and vim.
+
+```
+
 4. Partially Locally by Connecting codespace to Visual studio Code
 
 5. Totally Locally by Downloading the repo
