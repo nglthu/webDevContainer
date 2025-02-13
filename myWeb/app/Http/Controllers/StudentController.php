@@ -62,4 +62,17 @@ class StudentController extends Controller
         ]);
 
     }
+    public function jsonStudentReturn(Request $request){
+        $student = Student::all();
+        $data = json_decode($student, true);
+        return response()->json([
+            [
+                'json post success' => true,
+                'studentID 0' => $student[0]['studentIDNumber'],
+                'student name 0'=>$student[0]['studentFullName']
+              
+
+            ]
+        ]);
+    }
 }

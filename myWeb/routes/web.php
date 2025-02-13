@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/edit', 'App\Http\Controllers\EditController@index')->name('edit');
     //Save student
     Route::post('/saveStudent', 'App\Http\Controllers\SaveStudentController@index')->name('saveStudent');
+    Route::get('/getJsonStudent', 'App\Http\Controllers\StudentController@jsonStudentReturn');
 });
 
 require __DIR__.'/auth.php';
