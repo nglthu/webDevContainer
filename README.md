@@ -6,7 +6,7 @@
 
 [Introduction to dev containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 
-dev container : provides a disposable development environment
+dev container : provides a disposable development environment for pre-configured, disposable workspace inside the container
 
 .devcontainer folder
 
@@ -19,6 +19,12 @@ Dockerfile
 
 If dont create .devcontainer for specific development environment for codespaces, 
 default .devcontainer will be provided with some default general setup. 
+
+```
+dev containers provide a non-root user, provide a nice Bash prompt, 
+and install many tools you might want
+
+```
 
 4. Partially Locally by Connecting codespace to Visual studio Code
 
