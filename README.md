@@ -6,6 +6,20 @@
 
 [Introduction to dev containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 
+dev container : provides a disposable development environment
+
+.devcontainer folder
+
+```
+devcontainer.json
+docker-compose.yml
+Dockerfile
+
+```
+
+If dont create .devcontainer for specific development environment for codespaces, 
+default .devcontainer will be provided with some default general setup. 
+
 4. Partially Locally by Connecting codespace to Visual studio Code
 
 5. Totally Locally by Downloading the repo
