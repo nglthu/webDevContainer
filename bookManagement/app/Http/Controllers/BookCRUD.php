@@ -20,7 +20,6 @@ class BookCRUD extends Controller
 
         $books = Book::all();
         return view('Book', compact('books'));
-       
     }
 
     public function editStudent(Request $request)
@@ -31,7 +30,29 @@ class BookCRUD extends Controller
 
 
         return view('StudentEdit', compact('student'));
+    }
+    public function createBook()
+    {
+        //new book from Form
+        {
+            return view('newBook');
+        }
+    }
+    public function saveBook(Request $request)
+    {
+        //new book from Form
+        {
+            $bookCode = $request->input("bookCode");
+            $bookName = $request->input("bookName");
+            $bookAuthor = $request->input("bookAuthor");
 
+            // Book::where('id', $id)->update(["bookCode" => $bookCode, "bookName" => $bookName, "bookAuthor" => $bookAuthor]);
 
+            Book::create(["bookCode" => $bookCode, "bookName" => $bookName, "bookAuthor" => $bookAuthor]);
+
+            $books = Book::all();
+
+            return view('Book', compact('books'));
+        }
     }
 }

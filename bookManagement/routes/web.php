@@ -20,4 +20,14 @@ Route::middleware('auth')->group(function () {
 Route::get('/book', 'App\Http\Controllers\BookController@index');
 Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
+
+
+//new book
+
+Route::get('/newBook', 'App\Http\Controllers\BookCRUDController@createBook');
+
+//saveBookNew
+
+Route::get('/saveBookNew', 'App\Http\Controllers\BookCRUDController@saveBook');
+
 require __DIR__.'/auth.php';
