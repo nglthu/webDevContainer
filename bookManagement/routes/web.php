@@ -29,6 +29,7 @@ Route::get('/bookNew', 'App\Http\Controllers\BookCRUD@createBook');
 //saveBookNew
 
 Route::post('/saveBookNew', 'App\Http\Controllers\BookCRUD@saveBook');
+Route::post('/saveBook', 'App\Http\Controllers\BookCRUD@saveBook');
 
 //edit book: getEditBook
 
