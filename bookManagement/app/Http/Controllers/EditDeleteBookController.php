@@ -20,6 +20,7 @@ class EditDeleteStudentController extends Controller
 
         $books = Book::all();
         return view('Book', compact('books'));
+       
     }
 
     public function editStudent(Request $request)

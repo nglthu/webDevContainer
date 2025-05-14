@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/book', 'App\Http\Controllers\BookController@index')->name('getDelete');
+Route::get('/book', 'App\Http\Controllers\BookController@index');
 
-Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\EditDeleteBookController@delBook')->name('getDelete');
+Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\EditDeleteBookController@delBook');
 
 require __DIR__.'/auth.php';
