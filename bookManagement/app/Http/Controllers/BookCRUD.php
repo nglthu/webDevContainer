@@ -55,4 +55,15 @@ class BookCRUD extends Controller
             return view('Book', compact('books'));
         }
     }
+    public function editBook(Request $request)
+    {
+        //new book from Form
+        {    
+            
+             $id = $request->id;
+
+            $book = Book::findOrFail($id);
+            return view('editBook', compact('book'));
+        }
+    }
 }

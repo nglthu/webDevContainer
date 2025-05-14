@@ -24,10 +24,15 @@ Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 
 //new book
 
-Route::get('/newBook', 'App\Http\Controllers\BookCRUDController@createBook');
+Route::get('/bookNew', 'App\Http\Controllers\BookCRUD@createBook');
 
 //saveBookNew
 
-Route::get('/saveBookNew', 'App\Http\Controllers\BookCRUDController@saveBook');
+Route::post('/saveBookNew', 'App\Http\Controllers\BookCRUD@saveBook');
+
+//edit book: getEditBook
+
+Route::get('/getEditBook/{id}', 'App\Http\Controllers\BookCRUD@editBook');
+
 
 require __DIR__.'/auth.php';
