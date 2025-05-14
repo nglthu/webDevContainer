@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 
-class EditDeleteStudentController extends Controller
+class BookCRUD extends Controller
 
 {
     public function delBook(Request $request)

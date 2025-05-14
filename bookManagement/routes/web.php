@@ -18,6 +18,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/book', 'App\Http\Controllers\BookController@index');
-Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\EditDeleteBookController@delBook');
-Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\EditDeleteBookController@delBook');
+Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
+Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 require __DIR__.'/auth.php';
