@@ -10,7 +10,7 @@ export default defineConfig({
     ],
     server: {
         hmr: {
-            host: process.env.CODESPACE_NAME ? process.env.CODESPACE_NAME + '-' + process.env.CODESPCE_PORT + '.app.github.dev' : null,
+            host: process.env.CODESPACE_NAME ? process.env.CODESPACE_NAME + '-' + process.env.CODESPACE_PORT + '.app.github.dev' : null,
             clientPort: process.env.CODESPACE_NAME ? 443 : null,
             protocol: process.env.CODESPACE_NAME ? 'wss' : null
         },
