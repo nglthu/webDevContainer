@@ -55,6 +55,24 @@ class BookCRUD extends Controller
             return view('Book', compact('books'));
         }
     }
+    public function updateBook(Request $request)
+    {
+        //new book from Form
+        {
+            $bookCode = $request->input("bookCode");
+            $bookName = $request->input("bookName");
+            $bookAuthor = $request->input("bookAuthor");
+            $id = $request->id;
+
+            Book::where('id', $id)->update(["bookCode" => $bookCode, "bookName" => $bookName, "bookAuthor" => $bookAuthor]);
+
+           
+
+            $books = Book::all();
+
+            return view('Book', compact('books'));
+        }
+    }
     public function editBook(Request $request)
     {
         //new book from Form
