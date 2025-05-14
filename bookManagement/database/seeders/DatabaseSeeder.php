@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-       /*
+       
         User::factory()->create([
-            'name' => 'Test User 2',
-            'email' => 'test2@example.com',
-        ]);*/
+            'name' => 'Test User 2025 at 8.10 pm',
+            'email' => 'test2@example2025.com',
+        ]);
 
         Book::create([
            
