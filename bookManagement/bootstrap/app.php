@@ -15,7 +15,14 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
 
         if (env('APP_ENV') == 'production') {
-            $middleware->trustProxies(at: '*');
+            $middleware->trustProxies(at: [
+            '*',
+            'https://friendly-space-telegram-q7qv4xrx7wwf4wwv-9999.app.github.dev/build/assets/app-Bf4POITK.js',
+            
+        
+            ],
+        
+        );
         }
     })
 
