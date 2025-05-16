@@ -23,9 +23,9 @@ class DatabaseSeeder extends Seeder
 
         Book::create([
            
-            'bookName' => 'Book cua Nguyen',
-            'bookCode' => 'Nguyen239823',
-            'bookAuthor' => 'Ban Nguyen',
+            'bookName' => 'Book cua ban Bun',
+            'bookCode' => 'Ban Bun Test Book',
+            'bookAuthor' => 'Bun',
         ]
         );
     }

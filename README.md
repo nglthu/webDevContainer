@@ -1,45 +1,6 @@
 # webDevContainer
 
-## Development Environment
 
-1. Viruality using CodeSpaces
-
-[Introduction to dev containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
-
-dev container : provides a disposable development environment for pre-configured, disposable workspace inside the container
-
-.devcontainer folder
-
-```
-devcontainer.json
-docker-compose.yml
-Dockerfile
-
-```
-
-If dont create .devcontainer for specific development environment for codespaces, 
-default .devcontainer will be provided with some default general setup. 
-
-```
-dev containers provide a non-root user, provide a nice Bash prompt, 
-and install many tools you might want
-
-```
-
-Default devcontainer.json : Linux image
-
-```
-
-This Linux image includes a number of runtime versions for popular languages like Python, Node, PHP, Java, Go, C++, Ruby, and .NET Core/C#. 
-The latest or LTS releases of these languages are used. 
-There are also tools to support data science and machine learning, such as JupyterLab and Conda. 
-The default dev container image also includes other developer tools and utilities like Git, GitHub CLI, yarn, openssh, and vim.
-
-```
-
-4. Partially Locally by Connecting codespace to Visual studio Code
-
-5. Totally Locally by Downloading the repo
 
 # Web Laravel Framework
 
@@ -185,7 +146,14 @@ vite.config.js:
         }
 })
 ```
+## Development Environment
 
+Only use on port 9999 for the public/build/assets
+```
+bookManagement/public/build/assets/app-Bf4POITK.js
+bookManagement/public/build/assets/app-Dz0AWJyX.css
+
+```
 # Reference
 
 1. [Route to deployed Server in Codespaces](https://github.com/JonoHall/Laravel-Vite-Codespaces)
