@@ -2,19 +2,27 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Book;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $books = Book::all();
+
+    return view('dashboard', compact('books'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/book', 'App\Http\Controllers\BookController@index');
+    Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
+    Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
+
 });
 
 Route::get('/book', 'App\Http\Controllers\BookController@index');
@@ -36,4 +44,4 @@ Route::post('/saveBook', 'App\Http\Controllers\BookCRUD@updateBook');
 Route::get('/getEditBook/{id}', 'App\Http\Controllers\BookCRUD@editBook');
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
