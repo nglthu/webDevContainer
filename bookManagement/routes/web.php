@@ -43,5 +43,9 @@ Route::post('/saveBook', 'App\Http\Controllers\BookCRUD@updateBook');
 
 Route::get('/getEditBook/{id}', 'App\Http\Controllers\BookCRUD@editBook');
 
+Route::get('/getJsonBook', 'App\Http\Controllers\BookCRUD@jsonBookReturn');
+
+//    Route::get('/getJsonStudent', 'App\Http\Controllers\StudentController@jsonStudentReturn');
+
 
 require __DIR__ . '/auth.php';

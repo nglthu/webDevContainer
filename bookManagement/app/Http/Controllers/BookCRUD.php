@@ -84,4 +84,24 @@ class BookCRUD extends Controller
             return view('editBook', compact('book'));
         }
     }
+
+      public function jsonBookReturn(Request $request){
+        $book = Book::all();
+        $data = json_decode($book, true);
+        return response()->json([
+            [
+                'json post success' => true,
+                'bookCode 0' => $book[0]['bookCode'],
+                'bookName 0'=> $book[0]['bookName'],
+                'bookCode 1' => $book[1]['bookCode'],
+                'bookName 1'=> $book[1]['bookName'],
+                'bookCode 2' => $book[2]['bookCode'],
+                'bookName 2'=> $book[2]['bookName']
+              
+
+            ]
+        ]);
+    }
+
+    
 }
