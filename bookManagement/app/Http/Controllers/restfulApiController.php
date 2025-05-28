@@ -101,14 +101,33 @@ class restfulApiController extends Controller
         return response()->json($data);
     }
 
-    public function updateOnIdString(Request $request, string $id)
+    public function updateOnIdString(Request $request)
 
     {
-
+        $headers = apache_request_headers();
+        $id = $request->header('id');
 
         $data = Book::findOrFail($id);
 
         return response()->json($data);
+    }
+
+    //POST data via Params
+    public function postDataviaParams(Request $request){
+        
+
+         $id = $PARAMS['id'];
+         $bookName = $PARAMS['bookName'];
+         $bookCode = $PARAMS['bookCode'];
+         $bookAuthor = $PARAMS['bookAuthor'];
+         return response()->json(
+
+         [
+            'Json response' => 'ok',
+            'bookName' => $bookName
+         ]);
+    
+
     }
 
     /**

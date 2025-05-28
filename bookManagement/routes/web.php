@@ -30,14 +30,19 @@ Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 
 
+//////////////Route phan API////////////////
+
 Route::get('/bookjson', 'App\Http\Controllers\restfulApiController@bookStore');
 
 Route::post('/bookUpdate', 'App\Http\Controllers\restfulApiController@bookUpdate');
 
 Route::post('/postBook', 'App\Http\Controllers\restfulApiController@postBook');
 Route::post('/jsonBookPost', 'App\Http\Controllers\restfulApiController@jsonBookPost');
+Route::post('/updateOnIdString', 'App\Http\Controllers\restfulApiController@updateOnIdString');
 
+Route::post('/postDataviaParams', 'App\Http\Controllers\restfulApiController@postDataviaParams');
 
+///
 
 
 //new book
