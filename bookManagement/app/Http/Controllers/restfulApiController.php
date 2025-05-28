@@ -20,7 +20,7 @@ class restfulApiController extends Controller
      */
     public function bookStore(Request $request)
     {
-        
+
         $book = Book::all();
         $data = json_decode($book, true);
         return response()->json($data);
@@ -36,7 +36,7 @@ class restfulApiController extends Controller
         $bookCode = $request->input('bookCode');
         $bookAuthor = $request->input('bookAuthor');
 
- 
+
 
         Book::create([
             "bookName" => $bookName,
@@ -58,39 +58,36 @@ class restfulApiController extends Controller
 
     public function jsonBookPost(Request $request)
     {
-        //by Body Json
 
-        $jsondata = file_get_contents('php://input');
-        $data = json_decode($jsondata, true);
-        echo $data['id'];
+        $json = file_get_contents('php://input');
+
+
+        $dataJSON = json_decode($json, true);
+
+        echo $dataJSON['bookName'];
 
         Book::create([
-            "bookName" => $data['bookName'],
-            "bookCode" => $data['bookCode'],
-            "bookAuthor" => $data['bookAuthor'],
+            "bookName" => $dataJSON['bookName'],
+            "bookCode" => $dataJSON['bookCode'],
+            "bookAuthor" => $dataJSON['bookAuthor'],
         ]);
+
         return response()->json([
             [
                 'json post success' => true,
-                'bookName' => $data['bookName'],
-                'bookCode' => $data['bookCode'],
-                'bookAuthor' => $data['bookAuthor']
+                'bookName' => $dataJSON['bookName'],
+                'bookCode' => $dataJSON['bookCode'],
+                'bookAuthor' => $dataJSON['bookAuthor']
 
             ]
         ]);
-
     }
 
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        
-        
-    
-    }
+    public function show(string $id) {}
 
     /**
      * Update the specified resource in storage.
@@ -104,14 +101,14 @@ class restfulApiController extends Controller
         return response()->json($data);
     }
 
-     public function updateOnIdString(Request $request, string $id)
+    public function updateOnIdString(Request $request, string $id)
 
     {
-        
+
 
         $data = Book::findOrFail($id);
 
-         return response()->json($data);
+        return response()->json($data);
     }
 
     /**
