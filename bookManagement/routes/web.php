@@ -30,6 +30,9 @@ Route::get('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 Route::post('/getDeleteBook/{id}', 'App\Http\Controllers\BookCRUD@delBook');
 
 
+Route::get('bookjson', 'App\Http\Controllers\restfulApiController@bookStore');
+
+
 //new book
 
 Route::get('/bookNew', 'App\Http\Controllers\BookCRUD@createBook');
