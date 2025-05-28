@@ -26,6 +26,36 @@ class restfulApiController extends Controller
         return response()->json($data);
     }
 
+    public function postBook(Request $request)
+    {
+        //form value 
+        //body http form value
+
+        $bookID = $request->input('id');
+        $bookName = $request->input('bookName');
+        $bookCode = $request->input('bookCode');
+        $bookAuthor = $request->input('bookAuthor');
+
+ 
+
+        Book::create([
+            "bookName" => $bookName,
+            "bookCode" => $bookCode,
+            "bookAuthor" => $bookAuthor
+        ]);
+
+
+
+        return response()->json(
+            [
+                'Post success ' => true,
+                "bookName" => $bookName,
+                "bookCode" => $bookCode,
+                "bookAuthor" => $bookAuthor
+            ]
+        );
+    }
+
     /**
      * Display the specified resource.
      */
