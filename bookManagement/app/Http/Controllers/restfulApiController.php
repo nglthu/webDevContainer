@@ -33,15 +33,29 @@ class restfulApiController extends Controller
     {
         
         
-    }
+    
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function bookUpdate(Request $request)
     {
-        //
+        $id = $request->id;
+
+        $data = Book::findOrFail($id);
+
+        return response()->json($data);
+    }
+
+     public function updateOnIdString(Request $request, string $id)
+
+    {
+        
+
+        $data = Book::findOrFail($id);
+
+         return response()->json($data);
     }
 
     /**
