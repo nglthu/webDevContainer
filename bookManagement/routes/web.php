@@ -35,6 +35,8 @@ Route::get('/bookjson', 'App\Http\Controllers\restfulApiController@bookStore');
 Route::post('/bookUpdate', 'App\Http\Controllers\restfulApiController@bookUpdate');
 
 Route::post('/postBook', 'App\Http\Controllers\restfulApiController@postBook');
+Route::post('/jsonBookPost', 'App\Http\Controllers\restfulApiController@jsonBookPost');
+
 
 
 

@@ -56,6 +56,32 @@ class restfulApiController extends Controller
         );
     }
 
+    public function jsonBookPost(Request $request)
+    {
+        //by Body Json
+
+        $jsondata = file_get_contents('php://input');
+        $data = json_decode($jsondata, true);
+        echo $data['id'];
+
+        Book::create([
+            "bookName" => $data['bookName'],
+            "bookCode" => $data['bookCode'],
+            "bookAuthor" => $data['bookAuthor'],
+        ]);
+        return response()->json([
+            [
+                'json post success' => true,
+                'bookName' => $data['bookName'],
+                'bookCode' => $data['bookCode'],
+                'bookAuthor' => $data['bookAuthor']
+
+            ]
+        ]);
+
+    }
+
+
     /**
      * Display the specified resource.
      */
